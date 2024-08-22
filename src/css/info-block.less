@@ -1,0 +1,32 @@
+.info-block {
+  background-color: #f8f200;
+  width: 624px;
+  height: 369px;
+  clip-path: polygon(
+    0 50px,
+    50px 0,
+    100% 0,
+    100% calc(100% - 50px),
+    calc(100% - 50px) 100%,
+    0 100%
+  );
+  box-sizing: border-box;
+  padding: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__label {
+    font-family: "Archangelsk", "sans-serif";
+    font-size: 62px;
+    line-height: 63px;
+  }
+  &__button {
+    font-weight: 700;
+    width: 272px;
+    height: 78px;
+    font-size: 24px;
+    color: #f8f200;
+    background-color: black;
+  }
+}
