@@ -1,0 +1,25 @@
+.header {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  z-index: 1;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .media768({
+      flex-direction: column;
+      gap: 10px;
+    });
+
+    .media576({
+      padding: 0;
+    });
+  }
+
+  &__social-media {
+    justify-content: center;
+  }
+}

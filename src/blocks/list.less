@@ -1,0 +1,48 @@
+.list {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+
+  li {
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 18px;
+    padding-left: 42px;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+
+    .media576({
+      padding-left: 50px;
+    });
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__color:before {
+    background-image: url(../images/color-icon.svg);
+  }
+  &__monitor:before {
+    background-image: url(../images/motion-icon.svg);
+  }
+  &__stars:before {
+    background-image: url(../images/stars-icon.svg);
+  }
+  &__disk:before {
+    background-image: url(../images/disk-icon.svg);
+  }
+  &__wysiwyg:before {
+    background-image: url(../images/wysiwyg-icon.svg);
+  }
+  &__collection:before {
+    background-image: url(../images/collections-icon.svg);
+  }
+}

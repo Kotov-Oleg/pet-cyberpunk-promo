@@ -1,0 +1,32 @@
+.social-media {
+  @padding: 20px;
+
+  display: flex;
+  gap: 40px;
+  align-items: center;
+
+  .media768({
+    gap: 30px;
+  });
+
+  &__item-container {
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: center;
+    width: 30px + @padding * 2;
+    min-width: 30px;
+    height: 30px;
+  }
+
+  &__item {
+    flex: 0 0 auto;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+
+    .media576({
+      width: 25px;
+      height: 25px;
+    })
+  }
+}

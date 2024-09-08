@@ -17,11 +17,22 @@
   font-weight: 700;
   src: url('../fonts/roboto/Roboto-Bold.ttf') format('truetype');
 }
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/roboto/Roboto-Light.ttf') format('truetype');
+}
 
-
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 html,
-body {
+body,
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
@@ -30,10 +41,8 @@ html {
   box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+body {
+  .roboto-regular();
 }
 
 a {
@@ -48,7 +57,6 @@ img {
   object-fit: cover;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+button {
+  cursor: pointer;
 }

@@ -1,0 +1,112 @@
+.form {
+  @border_color: #777777;
+
+  display: flex;
+  flex-direction: column;
+
+  &__input-text {
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    line-height: normal;
+    border-bottom: 1px solid @border_color;
+    margin-bottom: 35px;
+    height: 35px;
+    color: @white_text;
+
+    &::placeholder {
+      color: @white_text;
+      .roboto-light();
+    }
+  }
+
+  &__input-file-label {
+    height: 120px;
+    border: 1px dashed @border_color;
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 7px;
+  }
+  &__input-file {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  &__input-file-placeholder {
+    .roboto-light();
+    color: @white_text;
+    font-size: 18px;
+    line-height: 1;
+    border-bottom: 1px solid @white_text;
+  }
+  &__input-file-annotation {
+    .roboto-light();
+    color: @white_text;
+    font-size: 12px;
+
+    .media1024({
+      display: none;
+    })
+  }
+
+  &__btn-submit {
+    margin-bottom: 15px;
+    width: 192px;
+    height: 59px;
+    .roboto-bold();
+    font-size: 18px;
+    background-color: @accent_color;
+
+  }
+
+  &__checkbox-container {
+    display: flex;
+    align-items: center;
+    width: fit-content();
+    cursor: pointer;
+  }
+  &__checkbox {
+    flex: 0 0 auto;
+    appearance: none;
+    position: relative;
+    width: 14px;
+    height: 14px;
+    background: none;
+    border-radius: 0;
+    border: 1px solid @border_color;
+    margin: 0;
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 50%;
+      left: 50%;
+      background-image: url(../images/checked.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: 300ms;
+    }
+
+    &:checked:after {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transition: 300ms;
+    }
+  }
+  &__checkbox-label {
+    .roboto-light();
+    padding-left: 10px;
+    font-size: 12px;
+    line-height: normal;
+    color: @white_text;
+  }
+}
