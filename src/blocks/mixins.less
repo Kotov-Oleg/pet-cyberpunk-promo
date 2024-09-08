@@ -1,0 +1,60 @@
+.cut-rectangle(@n: 50px) {
+  clip-path: polygon(
+    0 @n,
+    @n 0,
+    100% 0,
+    100% calc(100% - @n),
+    calc(100% - @n) 100%,
+    0 100%
+  );
+}
+
+.accent-text {
+  color: @accent_text;
+  font-weight: 700;
+}
+
+.size(@n, @columns: @columns, @off: @offset) {
+  @width: 100% / @columns * @n;
+  width: calc(@width - @off);
+}
+
+.media1024(@code) {
+  @media screen and (max-width: 1024px) {
+    @code();
+  }
+}
+
+.media768(@code) {
+  @media screen and (max-width: 768px) {
+    @code();
+  }
+}
+
+.media576(@code) {
+  @media screen and (max-width: 576px) {
+    @code();
+  }
+}
+
+.archangelsk {
+  font-family: 'Archangelsk', 'system-ui';
+  font-style: normal;
+  font-weight: normal;
+}
+
+.roboto-light {
+  font-family: 'Roboto', 'system-ui';
+  font-weight: 300;
+  font-style: normal;
+}
+.roboto-regular {
+  font-family: 'Roboto', 'system-ui';
+  font-weight: 400;
+  font-style: normal;
+}
+.roboto-bold {
+  font-family: 'Roboto', 'system-ui';
+  font-weight: 700;
+  font-style: normal;
+}

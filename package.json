@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "gulp watch --map --sync",
-    "build": "gulp build --clean"
+    "build": "gulp build --clean --autoprefixer"
   },
   "keywords": [],
   "author": "",
@@ -25,5 +25,5 @@
     "gulp-sourcemaps": "^3.0.0",
     "prettier": "^3.3.3"
   },
-  "browserslist": "> 0.1%"
+  "browserslist": "> 0.5%"
 }

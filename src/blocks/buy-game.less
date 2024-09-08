@@ -1,0 +1,81 @@
+.buy-game {
+  position: relative;
+  background-color: @black_background;
+
+  &__picture {
+    @off: @offset / 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(50% - @off);
+    height: 100%;
+
+    .media1024({
+      @grid-width: calc(100% - @side-margin * 2);
+      width: calc(@grid-width / 6 * 2 - @offset / 2 + @side-margin);
+    });
+
+    .media768({
+      width: 100%;
+      height: auto;
+      position: relative;
+    });
+  }
+
+  & &__container {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    .media768({
+      padding-top: 40px;
+    })
+  }
+
+  &__content {
+    .size(4, @columns, @offset/2);
+    color: @white_text;
+
+    .media1024({
+      .size(4, 6, @offset/2);
+    });
+
+    .media768({
+      width: 100%;
+    });
+  }
+
+  &__label {
+    .archangelsk();
+    font-size: 62px;
+    line-height: 1;
+    color: @white_text;
+    margin-bottom: 25px;
+
+    .media576({
+      font-size: 30px;
+
+    })
+  }
+
+  & &__list {
+    margin-bottom: 70px;
+
+    .media768({
+      margin-bottom: 40px;
+    });
+  }
+
+  &__platforms-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 320px;
+    gap: 45px 0;
+  }
+
+  &__platform-item {
+    display: flex;
+    align-items: center;
+  }
+}
